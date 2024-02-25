@@ -1,0 +1,58 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View User</li>
+  </ol>
+</nav>
+
+<div class="view-user p-5">
+  {{#each rows}}
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h3>{{this.EmpFName}} {{this.EmpLName}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">EmpCode</th>
+              <th scope="col">EmpFName</th>
+              <th scope="col">EmpLName</th>
+              <th scope="col">Job</th>
+              <th scope="col">Manager</th>
+              <th scope="col">HireDate</th>
+              <th scope="col">Salary</th>
+              <th scope="col">Commission</th>
+              <th scope="col">DEPTCODE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{{this.EmpCode}}</th>
+              <td>{{this.EmpFName}}</td>
+              <td>{{this.EmpLName}}</td>
+              <td>{{this.Job}}</td>
+              <td>{{this.Manager}}</td>
+              <td>{{this.HireDate:}}</td>
+              <td>{{this.Salary}}</td>
+              <td>{{this.Commission}}</td>
+              <td>{{this.DEPTCODE}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col">
+          <b>Commits</b>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          {{this.Commission}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
